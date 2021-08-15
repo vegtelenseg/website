@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: noto-black;
+  src: url("./assets/fonts/noto-black.otf") format("otf");
+}
+
+@font-face {
+  font-family: noto-light;
+  src: url("./assets/fonts/noto-light.otf") format("otf");
+}
+
+@font-face {
+  font-family: noto-medium;
+  src: url("./assets/fonts/noto-medium.otf") format("otf");
+}
+
+@font-face {
+  font-family: noto-regular;
+  src: url("./assets/fonts/noto-regular.otf") format("otf");
+}
+
+@font-face {
+  font-family: noto-thin;
+  src: url("./assets/fonts/noto-thin.otf") format("otf");
+}
