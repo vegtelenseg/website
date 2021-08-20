@@ -1,12 +1,12 @@
 import {
-  createMuiTheme,
   responsiveFontSizes,
   Theme,
 } from "@material-ui/core/styles";
+import { createTheme } from '@material-ui/core/styles';
 // import RadioButtonUncheckedIcon from "@material-ui/icons/RadioButtonUnchecked";
 // import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 
-export const baseTheme: Theme = createMuiTheme({
+export const baseTheme: Theme = createTheme({
   breakpoints: {
     values: {
       xs: 0,
@@ -87,6 +87,12 @@ export const baseTheme: Theme = createMuiTheme({
     // },
   },
   overrides: {
+    // MuiInputLabel: {
+    //   outlined: {
+    //     // fontFamily: 'Regular',
+    //     color: '#707070',
+    //   },
+    // },
     MuiTypography: {
       root: {
         color: "inherit",
@@ -122,7 +128,23 @@ export const baseTheme: Theme = createMuiTheme({
     },
     MuiOutlinedInput: {
       root: {
-        // borderRadius: 30,
+        borderRadius: 'none',
+
+        color: '#fff',
+
+        '& .MuiOutlinedInput-notchedOutline': {
+          border: '1px solid #707070',
+        },
+        '&.Mui-focused': {
+          '& .MuiOutlinedInput-notchedOutline': {
+            border: '1px solid #707070',
+          },
+        },
+        '&:hover': {
+          '& .MuiOutlinedInput-notchedOutline': {
+            border: '1px solid #707070',
+          },
+        },
       },
       notchedOutline: {
         borderColor: "rgba(0,0,0,.8)",

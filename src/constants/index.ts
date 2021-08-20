@@ -1,3 +1,7 @@
+import LocationOnIcon from '@material-ui/icons/LocationOn';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
+
 export const NAV_ITEMS = [
   {
     name: "Home",
@@ -10,6 +14,24 @@ export const NAV_ITEMS = [
   },
   {
     name: "About",
+  },
+];
+
+export const LOCATION_DETAILS = [
+  {
+    title: 'Location',
+    description: 'Fourways Emahlanyeni street, 1200',
+    icon: LocationOnIcon,
+  },
+  {
+    title: 'Email',
+    description: 'siya@pussy.anal.com',
+    icon: MailOutlineIcon,
+  },
+  {
+    title: 'Call',
+    description: '+123123123123',
+    icon: PhoneIphoneIcon,
   },
 ];
 
