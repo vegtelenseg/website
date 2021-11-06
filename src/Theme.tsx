@@ -100,6 +100,7 @@ export const baseTheme: Theme = createTheme({
     },
     MuiContainer: {
       root: {
+        marginTop: 50,
         "@media (min-width: 767px)": {
           paddingRight: "2.5rem",
           paddingLeft: "2.5rem",
@@ -128,7 +129,7 @@ export const baseTheme: Theme = createTheme({
     },
     MuiOutlinedInput: {
       root: {
-        borderRadius: 'none',
+        borderRadius: 10,
 
         color: '#fff',
 

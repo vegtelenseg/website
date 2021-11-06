@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { useField } from 'formik';
 import TextField, { TextFieldProps } from '@material-ui/core/TextField';
 // import {InputAdornment} from '@material-ui/core';
@@ -6,9 +5,10 @@ import TextField, { TextFieldProps } from '@material-ui/core/TextField';
 import {makeStyles} from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-  TextField: {
+  textField: {
     color: '#000',
     width: '100%',
+    borderRadius: '50%'
   },
 }));
 
@@ -26,7 +26,7 @@ export function CustomTextField({name, InputProps, ...props}: PropsType) {
       variant="outlined"
       error={Boolean(meta.touched && meta.error)}
       helperText={meta.touched && meta.error ? meta.error : null}
-      className={classes.TextField}
+      className={classes.textField}
       InputProps={{
         // classes: {input: classes.resize},
         ...InputProps,

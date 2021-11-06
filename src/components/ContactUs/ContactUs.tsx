@@ -5,6 +5,7 @@ import {
   Grid,
   TextareaAutosize,
   Container,
+  Button,
 } from '@material-ui/core';
 import { CustomTextField } from '../CustomTextField/CustomTextField';
 import { Formik, Form } from 'formik';
@@ -16,7 +17,9 @@ const ValidationSchema = Yup.object().shape({});
 const useStyles = makeStyles((theme) => ({
   textArea: {
     width: '100%',
-    height: '200',
+    height: 200,
+    boxSizing: 'border-box',
+    borderRadius: 10
   },
   contactContainer: {
     display: 'flex',
@@ -39,6 +42,13 @@ const useStyles = makeStyles((theme) => ({
   locationDetailsContainer: {
     display: 'flex',
     marginBottom: theme.spacing(4)
+  },
+  submitButtonContainer: {
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  submitButton: {
+    width: '50%',
   }
 }));
 
@@ -112,7 +122,13 @@ export const ContactUs = () => {
                       className={classes.textArea}
                     />
                   </Grid>
+
                 </Grid>
+                <Grid item xs={12} md={12} className={classes.submitButtonContainer}>
+                    <Button variant="contained" color="secondary" className={classes.submitButton}>
+                      Submit
+                    </Button>
+                  </Grid>
               </Grid>
             </Grid>
           </Form>
