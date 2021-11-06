@@ -1,12 +1,12 @@
 import {
   Box,
-  makeStyles,
   Typography,
   Grid,
   TextareaAutosize,
   Container,
   Button,
-} from '@material-ui/core';
+} from '@mui/material';
+import { makeStyles } from '@mui/styles';
 import { CustomTextField } from '../CustomTextField/CustomTextField';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
@@ -14,7 +14,7 @@ import { LOCATION_DETAILS } from '../../constants';
 
 const ValidationSchema = Yup.object().shape({});
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: any) => ({
   textArea: {
     width: '100%',
     height: 200,
@@ -118,7 +118,7 @@ export const ContactUs = () => {
                     <TextareaAutosize
                       name="message"
                       placeholder="Message"
-                      rowsMin={15}
+                      // rowsMin={15}
                       className={classes.textArea}
                     />
                   </Grid>

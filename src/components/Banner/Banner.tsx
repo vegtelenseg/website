@@ -1,8 +1,9 @@
-import { Box, makeStyles, Typography } from "@material-ui/core";
+import { Box, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import banner from "../../assets/images/banner.jpg";
 import { BANNER_PROPS } from "../../constants";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: any) => ({
   banner: {
     position: "relative",
     height: "100vh",

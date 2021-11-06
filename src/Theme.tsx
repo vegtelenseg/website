@@ -1,10 +1,6 @@
-import {
-  responsiveFontSizes,
-  Theme,
-} from "@material-ui/core/styles";
-import { createTheme } from '@material-ui/core/styles';
-// import RadioButtonUncheckedIcon from "@material-ui/icons/RadioButtonUnchecked";
-// import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import { responsiveFontSizes, Theme, createTheme } from '@mui/material/styles';
+// import RadioButtonUncheckedIcon from "@mui/icons/RadioButtonUnchecked";
+// import CheckCircleIcon from "@mui/icons/CheckCircle";
 
 export const baseTheme: Theme = createTheme({
   breakpoints: {
@@ -19,19 +15,19 @@ export const baseTheme: Theme = createTheme({
   palette: {
     // text: {primary: '#fff', secondary: '#002765', disabled: 'grey'},
     primary: {
-      dark: "rgba(255, 255, 255, 0.7)",
-      main: "#fefafa",
-      light: "#75AED1",
+      dark: 'rgba(255, 255, 255, 0.7)',
+      main: '#fefafa',
+      light: '#75AED1',
     },
     secondary: {
-      dark: "rgba(117, 174, 209, 0.7)",
-      main: "#75AED1",
-      light: "#66ADD0",
+      dark: 'rgba(117, 174, 209, 0.7)',
+      main: '#75AED1',
+      light: '#66ADD0',
     },
     error: {
-      dark: "#C60C30",
-      main: "#C60C30",
-      light: "#C60C30",
+      dark: '#C60C30',
+      main: '#C60C30',
+      light: '#C60C30',
     },
     // warning: {
     //   main: '#D2492A',
@@ -49,44 +45,7 @@ export const baseTheme: Theme = createTheme({
     //   white: '#fff',
     // },
   },
-  props: {
-    // MuiSvgIcon: {
-    //   color: 'primary',
-    // },
-    // MuiButton: {
-    //   size: 'large',
-    // },
-    // MuiTypography: {
-    //   color: "inherit",
-    // },
-    // MuiInput: {
-    //   disableUnderline: true,
-    // },
-    // MuiFilledInput: {
-    //   disableUnderline: true,
-    // },
-    // MuiCheckbox: {
-    //   icon: <RadioButtonUncheckedIcon />,
-    //   checkedIcon: <CheckCircleIcon />,
-    // },
-    // MuiRadio: {
-    //   icon: <RadioButtonUncheckedIcon />,
-    //   checkedIcon: <CheckCircleIcon />,
-    // },
-    // MuiCircularProgress: {
-    //   size: 25,
-    // },
-    // //This props has not been added to the types
-    // //eslint-disable-next-line
-    // //@ts-ignore
-    // MuiAlert: {
-    //   variant: 'filled',
-    // },
-    // MuiTextField: {
-    //   variant: 'outlined',
-    // },
-  },
-  overrides: {
+  components: {
     // MuiInputLabel: {
     //   outlined: {
     //     // fontFamily: 'Regular',
@@ -94,122 +53,140 @@ export const baseTheme: Theme = createTheme({
     //   },
     // },
     MuiTypography: {
-      root: {
-        color: "inherit",
+      styleOverrides: {
+        root: {
+          color: 'inherit',
+        },
       },
     },
     MuiContainer: {
-      root: {
-        marginTop: 50,
-        "@media (min-width: 767px)": {
-          paddingRight: "2.5rem",
-          paddingLeft: "2.5rem",
+      styleOverrides: {
+        root: {
+          marginTop: 50,
+          '@media (min-width: 767px)': {
+            paddingRight: '2.5rem',
+            paddingLeft: '2.5rem',
+          },
         },
       },
     },
 
     MuiInputLabel: {
-      outlined: {
-        color: "rgba(0,0,0,.8)",
+      styleOverrides: {
+        outlined: {
+          color: 'rgba(0,0,0,.8)',
+        },
       },
     },
     MuiAppBar: {
-      root: {
-        padding: "1rem",
-      },
-      colorPrimary: {
-        backgroundColor: "rgba(0, 0, 0, 0.8)",
-        color: "#fff",
+      styleOverrides: {
+        root: {
+          padding: '1rem',
+        },
+        colorSecondary: {
+          backgroundColor: 'green'
+        },
+        colorPrimary: {
+          backgroundColor: 'red',
+        },
       },
     },
     MuiDrawer: {
-      paper: {
-        background: "rgba(116, 116, 117, .89)",
+      styleOverrides: {
+        paper: {
+          background: 'rgba(116, 116, 117, .89)',
+        },
       },
     },
     MuiOutlinedInput: {
-      root: {
-        borderRadius: 10,
+      styleOverrides: {
+        root: {
+          borderRadius: 10,
 
-        color: '#fff',
+          color: '#fff',
 
-        '& .MuiOutlinedInput-notchedOutline': {
-          border: '1px solid #707070',
-        },
-        '&.Mui-focused': {
           '& .MuiOutlinedInput-notchedOutline': {
             border: '1px solid #707070',
           },
-        },
-        '&:hover': {
-          '& .MuiOutlinedInput-notchedOutline': {
-            border: '1px solid #707070',
+          '&.Mui-focused': {
+            '& .MuiOutlinedInput-notchedOutline': {
+              border: '1px solid #707070',
+            },
+          },
+          '&:hover': {
+            '& .MuiOutlinedInput-notchedOutline': {
+              border: '1px solid #707070',
+            },
           },
         },
-      },
-      notchedOutline: {
-        borderColor: "rgba(0,0,0,.8)",
+        notchedOutline: {
+          borderColor: 'rgba(0,0,0,.8)',
+        },
       },
     },
     MuiInput: {},
 
     MuiButton: {
-      root: {
-        color: "#fff",
-        margin: "1rem",
-      },
-      containedSecondary: {
-        "&$hover": {
-          backgroundColor: "red",
+      styleOverrides: {
+        root: {
+          color: '#fff',
+          margin: '1rem',
         },
-      },
-      contained: {
-        boxShadow: "none",
-        "&$hover": {
-          background: "red",
+        containedSecondary: {
+          '&$hover': {
+            backgroundColor: 'red',
+          },
+        },
+        contained: {
+          boxShadow: 'none',
+          '&$hover': {
+            background: 'red',
+          },
         },
       },
     },
     MuiFormControl: {
-      root: {
-        width: "100%",
+      styleOverrides: {
+        root: {
+          width: '100%',
+        },
       },
     },
   },
   typography: {
-    fontFamily: ["noto-thin", "noto-regular", "sans", "sans-serif"].join(),
+    fontFamily: ['noto-thin', 'noto-regular', 'sans', 'sans-serif'].join(),
     fontSize: 16,
     h1: {
-      fontSize: "12rem",
+      fontSize: '12rem',
     },
     h3: {
-      fontSize: "9rem",
+      fontSize: '9rem',
     },
     h4: {
-      fontSize: "5rem",
-      fontFamily: "noto-thin",
+      fontSize: '5rem',
+      fontFamily: 'noto-thin',
     },
     h5: {
-      fontFamily: "tangerine-bold",
-      fontSize: "5rem",
+      fontFamily: 'tangerine-bold',
+      fontSize: '5rem',
     },
     h6: {
-      fontFamily: "tangerine",
-      fontSize: "3rem",
+      fontFamily: 'tangerine',
+      fontSize: '3rem',
     },
     body2: {
-      fontSize: "1rem",
-      fontFamily: "hg-regular",
-      color: "#22333E",
+      fontSize: '1rem',
+      fontFamily: 'hg-regular',
+      color: '#22333E',
     },
     caption: {
-      textAlign: "left",
+      textAlign: 'left',
     },
   },
 });
 
 export const theme = responsiveFontSizes(baseTheme, {
-  breakpoints: ["xs", "sm", "md", "lg", "xl"],
+  breakpoints: ['xs', 'sm', 'md', 'lg', 'xl'],
   factor: 4,
   // disableAlign: true,
 });

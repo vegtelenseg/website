@@ -1,6 +1,6 @@
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import PhoneIphoneIcon from '@material-ui/icons/PhoneIphone';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 
 export const NAV_ITEMS = [
   {

@@ -1,10 +1,10 @@
 import { useField } from 'formik';
-import TextField, { TextFieldProps } from '@material-ui/core/TextField';
-// import {InputAdornment} from '@material-ui/core';
+import TextField, { TextFieldProps } from '@mui/material/TextField';
+// import {InputAdornment} from '@mui/core';
 // import {ErrorIcon} from '../assets/icons/errorIcon';
-import {makeStyles} from '@material-ui/core/styles';
+import {makeStyles} from '@mui/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: any) => ({
   textField: {
     color: '#000',
     width: '100%',

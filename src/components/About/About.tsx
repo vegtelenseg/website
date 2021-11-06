@@ -1,7 +1,8 @@
-import { Container, Grid, makeStyles, Typography } from "@material-ui/core";
+import { Container, Grid, Typography } from "@mui/material";
+import { makeStyles } from '@mui/styles';
 import aboutImage from "../../assets/images/banner.jpg";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles((theme: any) => ({
   aboutContainer: {
     display: "flex",
     width: "100%",
